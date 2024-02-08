@@ -1,11 +1,9 @@
 body {
-    background-image: url(/images/trees3.jpeg);
-    min-height: 100%;
+    background: url(/images/bg.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+    background-size: auto;
 }
+
 header {
     z-index: 999;
 }
@@ -19,6 +17,11 @@ header {
         max-width: 1500px;
         min-height: 200px;
     }
+
+    .logo {
+        width: 80vw;
+    }
+
     .overlayTop::before {
         content: "";
         z-index: 10;
@@ -26,11 +29,9 @@ header {
         height: 20%;
         display: block;
         position: absolute;
-        background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.8) 0%,
-            rgba(0, 0, 0, 0) 50%
-        );
+        background: linear-gradient(180deg,
+                rgba(0, 0, 0, 0.8) 0%,
+                rgba(0, 0, 0, 0) 50%);
     }
 }
 
@@ -40,6 +41,12 @@ header {
         max-width: 1500px;
         min-height: 400px;
     }
+
+    .logo {
+        width: 400px;
+        height: 100px;
+    }
+
     .overlayTop::before {
         content: "";
         z-index: 10;
@@ -47,11 +54,9 @@ header {
         height: 50%;
         display: block;
         position: absolute;
-        background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.6) 0%,
-            rgba(0, 0, 0, 0) 50%
-        );
+        background: linear-gradient(180deg,
+                rgba(0, 0, 0, 0.6) 0%,
+                rgba(0, 0, 0, 0) 50%);
     }
 }
 
@@ -88,13 +93,33 @@ header {
     height: 100%;
     display: block;
     position: absolute;
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.8) 0%,
-        rgba(0, 0, 0, 0) 50%
-    );
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0) 50%);
 }
 
 .extend-bg {
     background-color: white;
+}
+
+.button-container {
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center; //both vertical and horizonal
+    justify-content: center
+}
+
+.button {
+    width: 100px;
+}
+
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    top: 0;
+    bottom: 0;
 }
