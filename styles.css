@@ -1,7 +1,7 @@
-body {
-    background: url(/images/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
+hr.dark {
+    border-top: 1px solid grey;
+    margin: 0 !important;
+    padding-bottom: 10px;
 }
 
 header {
@@ -13,6 +13,13 @@ header {
 }
 
 @media (width < 62em) {
+    body {
+        background: url(/images/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-attachment: scroll;
+    }
+
     .header-styles {
         max-width: 1500px;
         min-height: 200px;
@@ -37,6 +44,13 @@ header {
 
 /* Medium devices such as tablets (768px and up) */
 @media (width > 62em) {
+    body {
+        background: url(/images/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-attachment: fixed;
+    }
+
     .header-styles {
         max-width: 1500px;
         min-height: 400px;

@@ -33,6 +33,12 @@
             href="images/favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="images/favicon/site.webmanifest" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     </head>
 
     <body>
@@ -56,7 +62,7 @@
                         Chorley, Preston and surrounding areas
                     </p>
                     <p class="w3-hide-medium w3-hide-small">
-                        <a href="tel:123-456-7890">123-456-7890</a>
+                        <a href="tel:+44 7783 358117">+44-7783-358117</a>
                     </p>
                 </div>
 
@@ -94,9 +100,98 @@
         <!-- Page content -->
         <div class="extend-bg">
             <div class="w3-content w3-padding-large" id="portfolio">
+                <br />
+                <div
+                    id="carouselExampleIndicators"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                >
+                    <div class="carousel-indicators">
+                        <button
+                            type="button"
+                            data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide 1"
+                        ></button>
+                        <button
+                            type="button"
+                            data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="1"
+                            aria-label="Slide 2"
+                        ></button>
+                        <button
+                            type="button"
+                            data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="2"
+                            aria-label="Slide 3"
+                        ></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div
+                            class="carousel-item active wow animate__animated animate__fadeIn"
+                        >
+                            <img
+                                src="/images/gallery/6.webp"
+                                class="d-block w-100 rounded"
+                                alt="..."
+                            />
+                        </div>
+                        <div
+                            class="carousel-item wow animate__animated animate__fadeIn"
+                        >
+                            <img
+                                src="/images/gallery/3.webp"
+                                class="d-block w-100 rounded"
+                                alt="..."
+                            />
+                        </div>
+
+                        <div
+                            class="carousel-item wow animate__animated animate__fadeIn"
+                        >
+                            <img
+                                src="/images/gallery/7.webp"
+                                class="d-block w-100 rounded"
+                                alt="..."
+                            />
+                        </div>
+                    </div>
+                    <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev"
+                    >
+                        <span
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next"
+                    >
+                        <span
+                            class="carousel-control-next-icon"
+                            aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <script>
+                    new WOW().init();
+                    $(".carousel").carousel();
+                </script>
+
                 <!-- The Modal -->
                 <div class="modal" id="bookingModal">
-                    <div class="modal-dialog modal-xl">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
                         <div class="modal-content">
                             <!-- Modal Header -->
                             <div class="modal-header">
@@ -110,13 +205,16 @@
 
                             <!-- Modal body -->
                             <!-- Google Calendar Appointment Scheduling begin -->
-                            <iframe
+                            <!-- <iframe
                                 src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3uxVK3NwfO6CcckqSwjuphXzWvcEAQ0Ckb9RbB7yau0Sk4MsELn8YiPDJfgc2dGmbMbDJx4SYL?gv=true"
                                 style="border: 0"
                                 width="100%"
                                 height="600"
                                 frameborder="0"
-                            ></iframe>
+                            ></iframe> -->
+                            <div class="modal-body">
+                                <h3>Coming soon...</h3>
+                            </div>
                             <!-- end Google Calendar Appointment Scheduling -->
 
                             <!-- Modal footer -->
@@ -132,12 +230,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal" id="treeSurgeryModal">
-                    <div class="modal-dialog modal-xl">
+
+                <div class="modal" id="treeRemovalModal">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
                         <div class="modal-content">
                             <!-- Modal Header -->
                             <div class="modal-header">
-                                <h4 class="modal-title">Tree Surgery</h4>
+                                <h4 class="modal-title">Tree removal</h4>
                                 <button
                                     type="button"
                                     class="btn-close"
@@ -147,7 +246,139 @@
 
                             <!-- Modal body -->
                             <div class="modal-body">
-                                <p>Modal body text goes here.</p>
+                                <p>
+                                    We are able to remove problematic trees
+                                    using a variety of methods such as sectional
+                                    dismantles, rigging and felling. With some
+                                    cases, site and job specific, we will even
+                                    employ the use of MEWPs (mobile, elevated
+                                    work platforms) or cranes. We strive to
+                                    complete the task with minimal damage to the
+                                    surrounding area and our arborists are fully
+                                    trained and competent to carry out these
+                                    works. With all waste and logs removed from
+                                    site after these operations are carried out.
+                                </p>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button
+                                    type="button"
+                                    class="btn btn-danger"
+                                    data-bs-dismiss="modal"
+                                >
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal" id="hedgeCuttingModal">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Hedge cutting</h4>
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                ></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p>
+                                    Here at William Atherton Arboricultural
+                                    Services we are able to trim and maintain
+                                    any size or shape of hedge. We are also able
+                                    to reduce the height of hedges if required
+                                </p>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button
+                                    type="button"
+                                    class="btn btn-danger"
+                                    data-bs-dismiss="modal"
+                                >
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal" id="treeReportModal">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">
+                                    Tree reports, TPO, planning applications &
+                                    tree planting
+                                </h4>
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                ></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p>
+                                    Here at William Atherton Arboricultural
+                                    Services, our trained professionals are able
+                                    to carry out a variety of tree reports, TPO
+                                    applications and planning applications to
+                                    suit your needs We are able to carry out
+                                    tree planting services depending on your
+                                    requirements, we can do both large scale
+                                    planting schemes as well as planting
+                                    singular specimens.
+                                </p>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button
+                                    type="button"
+                                    class="btn btn-danger"
+                                    data-bs-dismiss="modal"
+                                >
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal" id="stumpGrindModal">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Stump grinding</h4>
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                ></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p>
+                                    Here at William Atherton Arboricultural
+                                    Services we are able to use specialist stump
+                                    grinders to grind out stumps to below ground
+                                    level with all excess waste removed from
+                                    site.
+                                </p>
                             </div>
 
                             <!-- Modal footer -->
@@ -178,6 +409,7 @@
                             rigging and lowering of branches or placing
                             protection in place where required.
                         </p>
+                        <br />
                         <h2>About the owner</h2>
                         <p>
                             Atherton Arboricultural Services is owned and
@@ -200,24 +432,62 @@
                                     class="overlay img-container"
                                     style="cursor: pointer"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#treeSurgeryModal"
+                                    data-bs-target="#treeRemovalModal"
                                 >
                                     <img
                                         class="w-100 h-100 rounded"
-                                        src="https://empire-s3-production.bobvila.com/articles/wp-content/uploads/2018/05/Felling_a_Tree.jpg"
+                                        src="/images/cut_tree.jpg"
                                         alt="Nature"
                                     />
-                                    <div class="topleft">Tree surgery</div>
+                                    <div class="topleft">Tree removal</div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-sm-6 col-12">
-                                <div class="overlay img-container">
+                                <div
+                                    class="overlay img-container"
+                                    style="cursor: pointer"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#hedgeCuttingModal"
+                                >
                                     <img
                                         class="w-100 h-100 rounded"
-                                        src="https://www.justlawnmowers.co.uk/blog/wp-content/uploads/2015/05/h442e016_g1.png"
+                                        src="/images/trim_hedge.png"
                                         alt="Nature"
                                     />
-                                    <div class="topleft">Hedge Cutting</div>
+                                    <div class="topleft">Hedge cutting</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-6 col-12">
+                                <div
+                                    class="overlay img-container"
+                                    style="cursor: pointer"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#treeReportModal"
+                                >
+                                    <img
+                                        class="w-100 h-100 rounded"
+                                        src="/images/plant_tree.png"
+                                        alt="Nature"
+                                    />
+                                    <div class="topleft">
+                                        Tree reports, tree planting & more
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-12">
+                                <div
+                                    class="overlay img-container"
+                                    style="cursor: pointer"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#stumpGrindModal"
+                                >
+                                    <img
+                                        class="w-100 h-100 rounded"
+                                        src="/images/tree_stump.jpeg"
+                                        alt="Nature"
+                                    />
+                                    <div class="topleft">Stump grinding</div>
                                 </div>
                             </div>
 
@@ -225,47 +495,31 @@
                                 <div class="overlay img-container">
                                     <img
                                         class="w-100 h-100 rounded"
-                                        src="https://www.warwickshire.gov.uk/images/MicrosoftTeams_image__19_.png"
+                                        src="/images/prune-tree.jpg"
                                         alt="Nature"
                                     />
-                                    <div class="topleft">Tree planting</div>
+                                    <div class="topleft">Tree pruning</div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-sm-6 col-12">
                                 <div class="overlay img-container">
                                     <img
                                         class="w-100 h-100 rounded"
-                                        src="https://www.rochesterstumpremoval.com/uploads/1/1/2/6/112674607/rochester-ny-stump-service-how-to-dig_orig.jpeg"
+                                        src="/images/cut_tree_2.jpg-org"
                                         alt="Nature"
                                     />
-                                    <div class="topleft">Stump removal</div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-sm-6 col-12">
-                                <div class="overlay img-container">
-                                    <img
-                                        class="w-100 h-100 rounded"
-                                        src="https://www.warwickshire.gov.uk/images/MicrosoftTeams_image__19_.png"
-                                        alt="Nature"
-                                    />
-                                    <div class="topleft">Tree planting</div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-12">
-                                <div class="overlay img-container">
-                                    <img
-                                        class="w-100 h-100 rounded"
-                                        src="https://www.rochesterstumpremoval.com/uploads/1/1/2/6/112674607/rochester-ny-stump-service-how-to-dig_orig.jpeg"
-                                        alt="Nature"
-                                    />
-                                    <div class="topleft">Stump removal</div>
+                                    <div class="topleft">Site clearances</div>
                                 </div>
                             </div>
                         </div>
+                        <br />
+                        <center>Click images for more info</center>
                     </div>
                     <!-- Gallery -->
                 </div>
+
+                <br />
+                <hr class="dark" />
                 <br />
 
                 <div class="row">
@@ -305,11 +559,14 @@
                         Use the below form and we will get back to you as soon
                         as possible.
                     </p>
-                    <p>Alternatively ring us on: +441234567</p>
+                    <p>
+                        Alternatively ring us on:
+                        <a href="tel:+44 7783 358117">+44-7783-358117</a>
+                    </p>
 
                     <!-- TODO update email address -->
                     <form
-                        action="mailto:someone@example.com"
+                        action="mailto:WAArboriculturalServices@outlook.com"
                         method="post"
                         enctype="text/plain"
                     >
