@@ -1,7 +1,6 @@
 hr.dark {
-    border-top: 1px solid grey;
+    border-top: 1px solid lightGrey;
     margin: 0 !important;
-    padding-bottom: 10px;
 }
 
 header {
