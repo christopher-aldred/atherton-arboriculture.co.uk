@@ -5,40 +5,32 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
         />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <link
-            rel="stylesheet"
-            href="https://www.w3schools.com/w3css/4/w3.css"
-        />
+        <link rel="stylesheet" href="w3.css" />
         <link rel="stylesheet" href="./styles.css" />
 
         <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="images/favicon/apple-touch-icon.png"
+            href="images/favicon/apple-touch-icon.webp"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="images/favicon/favicon-32x32.png"
+            href="images/favicon/favicon-32x32.webp"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="images/favicon/favicon-16x16.png"
+            href="images/favicon/favicon-16x16.webp"
         />
         <link rel="manifest" href="images/favicon/site.webmanifest" />
-
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     </head>
 
     <body>
@@ -52,7 +44,7 @@
                     class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center"
                 >
                     <img
-                        src="/images/logo_cropped.png"
+                        src="/images/logo_cropped.webp"
                         alt="Logo"
                         class="logo"
                     />
@@ -128,13 +120,13 @@
                             aria-label="Slide 3"
                         ></button>
                     </div>
-                    <div class="carousel-inner">
+                    <div class="carousel-inner rounded">
                         <div
                             class="carousel-item active wow animate__animated animate__fadeIn"
                         >
                             <img
                                 src="/images/gallery/6.webp"
-                                class="d-block w-100 rounded"
+                                class="d-block w-100"
                                 alt="..."
                             />
                         </div>
@@ -143,7 +135,7 @@
                         >
                             <img
                                 src="/images/gallery/3.webp"
-                                class="d-block w-100 rounded"
+                                class="d-block w-100"
                                 alt="..."
                             />
                         </div>
@@ -153,7 +145,7 @@
                         >
                             <img
                                 src="/images/gallery/7.webp"
-                                class="d-block w-100 rounded"
+                                class="d-block w-100"
                                 alt="..."
                             />
                         </div>
@@ -214,6 +206,12 @@
                             ></iframe> -->
                             <div class="modal-body">
                                 <h3>Coming soon...</h3>
+                                <p>
+                                    Please call on:
+                                    <a href="tel:+44 7783 358117"
+                                        >+44-7783-358117</a
+                                    >
+                                </p>
                             </div>
                             <!-- end Google Calendar Appointment Scheduling -->
 
@@ -394,6 +392,112 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="modal" id="treePruneModal">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Tree pruning</h4>
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                ></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p>
+                                    There are various ways to prune your trees
+                                    to give them the best possible care
+                                    depending on there situation. At William
+                                    Atherton Arboricultural Services we can
+                                    carry out whole reductions, crown raises or
+                                    crown thins as well as removal of select
+                                    limbs and deadwooding. Whole tree reductions
+                                    are carried out to reduce the overall size
+                                    of the tree whilst still keeping the trees
+                                    natural form. This is done by removing a set
+                                    percentage or predetermined length off the
+                                    end each branch, such as 20% in a 20%
+                                    reduction or 1.5m in a 1.5m reduction,
+                                    bringing each branch to a select prune point
+                                    to allow for optimum growth of the tree in
+                                    the future. Crown raises are carried out via
+                                    the removal of the lowest branches to a
+                                    select height to allow space underneath the
+                                    canopy, with the correct cuts to Bs3998.
+                                    This method of pruning is effective in
+                                    allowing light transmission to areas within
+                                    close proximity to the tree. Crown thinning
+                                    is carried out to keep the size of the tree
+                                    the same but to remove select branches from
+                                    within the canopy to reduce the overall
+                                    volume of the tree and as such allows light
+                                    to pass through the canopy easier. Also,
+                                    William Atherton Arboricultural Services can
+                                    carry out the removal of select limbs which
+                                    could be causing a nuisance such as damaging
+                                    property or touching telephone wires. Also
+                                    we offer the removal of deadwood within a
+                                    canopy which could cause injury or damage if
+                                    it falls of its own accord.
+                                </p>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button
+                                    type="button"
+                                    class="btn btn-danger"
+                                    data-bs-dismiss="modal"
+                                >
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal" id="siteClearModal">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Site clearances</h4>
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                ></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p>
+                                    We are able to carry out full site
+                                    clearances with the removal off all
+                                    vegetation on site. We are available to
+                                    carry this work out for both commercial and
+                                    domestic clients.
+                                </p>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button
+                                    type="button"
+                                    class="btn btn-danger"
+                                    data-bs-dismiss="modal"
+                                >
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <br />
                 <div class="row">
                     <div class="col-lg-6 col-12">
@@ -436,7 +540,7 @@
                                 >
                                     <img
                                         class="w-100 h-100 rounded"
-                                        src="/images/cut_tree.jpg"
+                                        src="/images/cut_tree.webp"
                                         alt="Nature"
                                     />
                                     <div class="topleft">Tree removal</div>
@@ -451,7 +555,7 @@
                                 >
                                     <img
                                         class="w-100 h-100 rounded"
-                                        src="/images/trim_hedge.png"
+                                        src="/images/trim_hedge.webp"
                                         alt="Nature"
                                     />
                                     <div class="topleft">Hedge cutting</div>
@@ -467,7 +571,7 @@
                                 >
                                     <img
                                         class="w-100 h-100 rounded"
-                                        src="/images/plant_tree.png"
+                                        src="/images/plant_tree.webp"
                                         alt="Nature"
                                     />
                                     <div class="topleft">
@@ -484,7 +588,7 @@
                                 >
                                     <img
                                         class="w-100 h-100 rounded"
-                                        src="/images/tree_stump.jpeg"
+                                        src="/images/tree_stump.webp"
                                         alt="Nature"
                                     />
                                     <div class="topleft">Stump grinding</div>
@@ -492,20 +596,30 @@
                             </div>
 
                             <div class="col-lg-6 col-sm-6 col-12">
-                                <div class="overlay img-container">
+                                <div
+                                    class="overlay img-container"
+                                    style="cursor: pointer"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#treePruneModal"
+                                >
                                     <img
                                         class="w-100 h-100 rounded"
-                                        src="/images/prune-tree.jpg"
+                                        src="/images/prune-tree.webp"
                                         alt="Nature"
                                     />
                                     <div class="topleft">Tree pruning</div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-sm-6 col-12">
-                                <div class="overlay img-container">
+                                <div
+                                    class="overlay img-container"
+                                    style="cursor: pointer"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#siteClearModal"
+                                >
                                     <img
                                         class="w-100 h-100 rounded"
-                                        src="/images/cut_tree_2.jpg-org"
+                                        src="/images/cut_tree_2.webp"
                                         alt="Nature"
                                     />
                                     <div class="topleft">Site clearances</div>
@@ -540,7 +654,7 @@
                         <center>
                             <h2>Certified by</h2>
                             <img
-                                src="/images/nptc-logo.png"
+                                src="/images/nptc-logo.webp"
                                 alt="Logo"
                                 width="50"
                                 height="50"
@@ -612,6 +726,17 @@
                 <!-- End page content -->
             </div>
         </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+            integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     </body>
     <footer class="bg-body-tertiary text-lg-start text-center">
         <!-- Copyright -->

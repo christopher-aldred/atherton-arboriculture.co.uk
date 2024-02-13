@@ -14,7 +14,7 @@ header {
 
 @media (width < 62em) {
     body {
-        background: url(/images/bg.jpg);
+        background: url(/images/bg.webp);
         background-repeat: no-repeat;
         background-size: auto;
         background-attachment: scroll;
@@ -45,7 +45,7 @@ header {
 /* Medium devices such as tablets (768px and up) */
 @media (width > 62em) {
     body {
-        background: url(/images/bg.jpg);
+        background: url(/images/bg.webp);
         background-repeat: no-repeat;
         background-size: auto;
         background-attachment: fixed;
