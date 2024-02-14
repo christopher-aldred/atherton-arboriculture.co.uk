@@ -25,6 +25,11 @@
         <link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/w3.css" />
         <link rel="stylesheet" href="css/styles.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
 
         <link
             rel="apple-touch-icon"
@@ -106,91 +111,56 @@
         </div>
         <!-- Page content -->
         <div class="extend-bg">
-            <div class="w3-content w3-padding-large" id="portfolio">
-                <br />
-                <div
-                    id="carouselExampleIndicators"
-                    class="carousel slide"
-                    data-bs-ride="carousel"
-                >
-                    <div class="carousel-indicators">
-                        <button
-                            type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="0"
-                            class="active"
-                            aria-current="true"
-                            aria-label="Slide 1"
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="1"
-                            aria-label="Slide 2"
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="2"
-                            aria-label="Slide 3"
-                        ></button>
+            <div class="wrapper">
+                <div class="carousel">
+                    <div>
+                        <img class="gallery-img" src="/images/gallery/1.webp" />
                     </div>
-                    <div class="carousel-inner rounded">
-                        <div
-                            class="carousel-item active wow animate__animated animate__fadeIn"
-                        >
-                            <img
-                                src="/images/gallery/6.webp"
-                                class="d-block w-100"
-                                alt="..."
-                            />
-                        </div>
-                        <div
-                            class="carousel-item wow animate__animated animate__fadeIn"
-                        >
-                            <img
-                                src="/images/gallery/3.webp"
-                                class="d-block w-100"
-                                alt="..."
-                            />
-                        </div>
-
-                        <div
-                            class="carousel-item wow animate__animated animate__fadeIn"
-                        >
-                            <img
-                                src="/images/gallery/7.webp"
-                                class="d-block w-100"
-                                alt="..."
-                            />
-                        </div>
+                    <div>
+                        <img class="gallery-img" src="/images/gallery/2.webp" />
                     </div>
-                    <button
-                        class="carousel-control-prev"
-                        type="button"
-                        data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev"
-                    >
-                        <span
-                            class="carousel-control-prev-icon"
-                            aria-hidden="true"
-                        ></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                        class="carousel-control-next"
-                        type="button"
-                        data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next"
-                    >
-                        <span
-                            class="carousel-control-next-icon"
-                            aria-hidden="true"
-                        ></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    <div>
+                        <img class="gallery-img" src="/images/gallery/3.webp" />
+                    </div>
+                    <div>
+                        <img class="gallery-img" src="/images/gallery/4.webp" />
+                    </div>
+                    <div>
+                        <img class="gallery-img" src="/images/gallery/5.webp" />
+                    </div>
+                    <div>
+                        <img class="gallery-img" src="/images/gallery/6.webp" />
+                    </div>
+                    <div>
+                        <img class="gallery-img" src="/images/gallery/7.webp" />
+                    </div>
+                    <div>
+                        <img class="gallery-img" src="/images/gallery/8.webp" />
+                    </div>
+                    <div>
+                        <img class="gallery-img" src="/images/gallery/9.webp" />
+                    </div>
+                    <div>
+                        <img
+                            class="gallery-img"
+                            src="/images/gallery/10.webp"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            class="gallery-img"
+                            src="/images/gallery/11.webp"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            class="gallery-img"
+                            src="/images/gallery/12.webp"
+                        />
+                    </div>
                 </div>
-
+            </div>
+            <div class="w3-content w3-padding-large" id="portfolio">
                 <!-- The Modal -->
                 <div class="modal" id="bookingModal">
                     <div class="modal-dialog modal-xl modal-dialog-centered">
@@ -747,7 +717,45 @@
             integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
             crossorigin="anonymous"
         ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script
+            type="text/javascript"
+            src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"
+        ></script>
+        <script>
+            $(document).ready(function () {
+                $(".carousel").slick({
+                    arrows: false,
+                    centerMode: true,
+                    slidesToShow: 9,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    responsive: [
+                        {
+                            breakpoint: 1500,
+                            settings: {
+                                centerPadding: "40px",
+                                slidesToShow: 5,
+                            },
+                        },
+                        {
+                            breakpoint: 800,
+                            settings: {
+                                centerPadding: "40px",
+                                slidesToShow: 3,
+                            },
+                        },
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                centerPadding: "40px",
+                                slidesToShow: 2,
+                            },
+                        },
+                    ],
+                });
+            });
+        </script>
     </body>
     <footer class="bg-body-tertiary text-lg-start text-center">
         <!-- Copyright -->

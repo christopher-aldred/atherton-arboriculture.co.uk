@@ -7,11 +7,24 @@ header {
     z-index: 999;
 }
 
-.navSpacing {
-    bottom: -18px;
-}
-
 @media (width < 62em) {
+
+    .navSpacing {
+        bottom: -168px;
+        outline-style: solid;
+        outline: white solid 3px;
+    }
+
+    .logo {
+        height: 9vh;
+    }
+
+    .gallery-img {
+        height: 150px;
+        width: 250px;
+        object-fit: cover;
+    }
+
     body {
         background: url(/images/bg.webp);
         background-repeat: no-repeat;
@@ -21,11 +34,7 @@ header {
 
     .header-styles {
         max-width: 1500px;
-        min-height: 200px;
-    }
-
-    .logo {
-        width: 80vw;
+        min-height: 150px;
     }
 
     .overlayTop::before {
@@ -43,6 +52,19 @@ header {
 
 /* Medium devices such as tablets (768px and up) */
 @media (width > 62em) {
+
+    .navSpacing {
+        bottom: -218px;
+        outline-style: solid;
+        outline: white solid 3px;
+    }
+
+    .gallery-img {
+        height: 200px;
+        width: 300px;
+        object-fit: cover;
+    }
+
     body {
         background: url(/images/bg.webp);
         background-repeat: no-repeat;
