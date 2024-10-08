@@ -1,761 +1,721 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Google tag (gtag.js) -->
-        <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-0KBGZZMRR4"
-        ></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0KBGZZMRR4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-            gtag("config", "G-0KBGZZMRR4");
-        </script>
-        <title>Atherton Arboriculture</title>
-        <meta charset="UTF-8" />
-        <meta
-            name="description"
-            content="Arboricultural and tree surgery near Leyland, Preston & Chorley"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/w3.css" />
-        <link rel="stylesheet" href="css/styles.css" />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-        />
+      gtag("config", "G-0KBGZZMRR4");
+    </script>
+    <title>Atherton Arboriculture</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Arboricultural and tree surgery near Leyland, Preston & Chorley"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
 
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="images/favicon/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="images/favicon/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="images/favicon/favicon-16x16.png"
-        />
-        <link rel="manifest" href="images/favicon/site.webmanifest" />
-    </head>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+  </head>
 
-    <body>
-        <div id="background" />
-        <div class="overlayTop">
-            <!-- Header -->
-            <header
-                class="w3-display-container w3-content w3-center header-styles"
-            >
-                <div
-                    class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center"
-                >
-                    <img
-                        src="images/logo_cropped.webp"
-                        alt="Logo"
-                        class="logo"
-                    />
-
-                    <p class="w3-hide-medium w3-hide-small">
-                        Serving any arboricultural needs around Leyland,
-                        Chorley, Preston and surrounding areas
-                    </p>
-                    <p class="w3-hide-medium w3-hide-small">
-                        <a href="tel:+44 7783 358117">+44-7783-358117</a>
-                    </p>
-                </div>
-
-                <!-- Navbar (placed at the bottom of the header image) -->
-                <div
-                    class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small navSpacing"
-                >
-                    <a href="#portfolio" class="w3-bar-item w3-button">About</a>
-                    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-                    <a
-                        class="w3-bar-item w3-button"
-                        data-bs-toggle="modal"
-                        data-bs-target="#bookingModal"
-                        href="#"
-                        >Book</a
-                    >
-                </div>
-            </header>
-        </div>
-
-        <!-- Navbar on small screens -->
+  <body>
+    <div id="background" />
+    <div class="overlayTop">
+      <!-- Header -->
+      <header class="w3-display-container w3-content w3-center header-styles">
         <div
-            class="w3-center w3-light-grey w3-padding-16 w3-hide-large w3-hide-medium"
+          class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center"
         >
-            <div class="w3-bar w3-light-grey">
-                <a href="#portfolio" class="w3-bar-item w3-button">About</a>
-                <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-                <a
-                    class="w3-bar-item w3-button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#bookingModal"
-                    href="#"
-                    >Book</a
-                >
-            </div>
-        </div>
-        <!-- Page content -->
-        <div class="extend-bg">
-            <div class="wrapper">
-                <div class="carousel">
-                    <div>
-                        <img class="gallery-img" src="images/gallery/1.webp" />
-                    </div>
-                    <div>
-                        <img class="gallery-img" src="images/gallery/2.webp" />
-                    </div>
-                    <div>
-                        <img class="gallery-img" src="images/gallery/3.webp" />
-                    </div>
-                    <div>
-                        <img class="gallery-img" src="images/gallery/4.webp" />
-                    </div>
-                    <div>
-                        <img class="gallery-img" src="images/gallery/5.webp" />
-                    </div>
-                    <div>
-                        <img class="gallery-img" src="images/gallery/6.webp" />
-                    </div>
-                    <div>
-                        <img class="gallery-img" src="images/gallery/7.webp" />
-                    </div>
-                    <div>
-                        <img class="gallery-img" src="images/gallery/8.webp" />
-                    </div>
-                    <div>
-                        <img class="gallery-img" src="images/gallery/9.webp" />
-                    </div>
-                    <div>
-                        <img class="gallery-img" src="images/gallery/10.webp" />
-                    </div>
-                    <div>
-                        <img class="gallery-img" src="images/gallery/11.webp" />
-                    </div>
-                    <div>
-                        <img class="gallery-img" src="images/gallery/12.webp" />
-                    </div>
-                </div>
-            </div>
-            <div class="w3-content w3-padding-large" id="portfolio">
-                <!-- The Modal -->
-                <div class="modal" id="bookingModal">
-                    <div class="modal-dialog modal-xl modal-dialog-centered">
-                        <div class="modal-content">
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title">Appointment booking</h4>
-                                <button
-                                    type="button"
-                                    class="btn-close"
-                                    data-bs-dismiss="modal"
-                                ></button>
-                            </div>
+          <img src="images/logo_cropped.webp" alt="Logo" class="logo" />
 
-                            <!-- Modal body -->
-                            <!-- Google Calendar Appointment Scheduling begin -->
-                            <!-- <iframe
+          <p class="w3-hide-medium w3-hide-small">
+            Serving any arboricultural needs around Leyland, Chorley, Preston
+            and surrounding areas
+          </p>
+          <p class="w3-hide-medium w3-hide-small">
+            <a href="tel:+44 7783 358117">+44-7783-358117</a>
+          </p>
+        </div>
+
+        <!-- Navbar (placed at the bottom of the header image) -->
+        <div
+          class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small navSpacing"
+        >
+          <a href="#portfolio" class="w3-bar-item w3-button">About</a>
+          <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+          <a
+            class="w3-bar-item w3-button"
+            data-bs-toggle="modal"
+            data-bs-target="#bookingModal"
+            href="#"
+            >Book</a
+          >
+        </div>
+      </header>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div class="w3-center w3-light-grey w3-hide-large w3-hide-medium">
+      <div class="w3-bar w3-light-grey">
+        <a href="#portfolio" class="w3-bar-item w3-button">About</a>
+        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+        <a
+          class="w3-bar-item w3-button"
+          data-bs-toggle="modal"
+          data-bs-target="#bookingModal"
+          href="#"
+          >Book</a
+        >
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="extend-bg">
+      <div class="wrapper">
+        <div class="carousel">
+          <div>
+            <img class="gallery-img" src="images/gallery/1.webp" />
+          </div>
+          <div>
+            <img class="gallery-img" src="images/gallery/2.webp" />
+          </div>
+          <div>
+            <img class="gallery-img" src="images/gallery/3.webp" />
+          </div>
+          <div>
+            <img class="gallery-img" src="images/gallery/4.webp" />
+          </div>
+          <div>
+            <img class="gallery-img" src="images/gallery/5.webp" />
+          </div>
+          <div>
+            <img class="gallery-img" src="images/gallery/6.webp" />
+          </div>
+          <div>
+            <img class="gallery-img" src="images/gallery/7.webp" />
+          </div>
+          <div>
+            <img class="gallery-img" src="images/gallery/8.webp" />
+          </div>
+          <div>
+            <img class="gallery-img" src="images/gallery/9.webp" />
+          </div>
+          <div>
+            <img class="gallery-img" src="images/gallery/10.webp" />
+          </div>
+          <div>
+            <img class="gallery-img" src="images/gallery/11.webp" />
+          </div>
+          <div>
+            <img class="gallery-img" src="images/gallery/12.webp" />
+          </div>
+        </div>
+      </div>
+      <div class="w3-content w3-padding-large" id="portfolio">
+        <!-- The Modal -->
+        <div class="modal" id="bookingModal">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Appointment booking</h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+
+              <!-- Modal body -->
+              <!-- Google Calendar Appointment Scheduling begin -->
+              <!-- <iframe
                                 src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3uxVK3NwfO6CcckqSwjuphXzWvcEAQ0Ckb9RbB7yau0Sk4MsELn8YiPDJfgc2dGmbMbDJx4SYL?gv=true"
                                 style="border: 0"
                                 width="100%"
                                 height="600"
                                 frameborder="0"
                             ></iframe> -->
-                            <div class="modal-body">
-                                <h3>Coming soon...</h3>
-                                <p>
-                                    Please call on:
-                                    <a href="tel:+44 7783 358117"
-                                        >+44-7783-358117</a
-                                    >
-                                </p>
-                            </div>
-                            <!-- end Google Calendar Appointment Scheduling -->
+              <div class="modal-body">
+                <h3>Coming soon...</h3>
+                <p>
+                  Please call on:
+                  <a href="tel:+44 7783 358117">+44-7783-358117</a>
+                </p>
+              </div>
+              <!-- end Google Calendar Appointment Scheduling -->
 
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <button
-                                    type="button"
-                                    class="btn btn-danger"
-                                    data-bs-dismiss="modal"
-                                >
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal" id="treeRemovalModal">
-                    <div class="modal-dialog modal-xl modal-dialog-centered">
-                        <div class="modal-content">
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title">Tree removal</h4>
-                                <button
-                                    type="button"
-                                    class="btn-close"
-                                    data-bs-dismiss="modal"
-                                ></button>
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <p>
-                                    We are able to remove problematic trees
-                                    using a variety of methods such as sectional
-                                    dismantles, rigging and felling. With some
-                                    cases, site and job specific, we will even
-                                    employ the use of MEWPs (mobile, elevated
-                                    work platforms) or cranes. We strive to
-                                    complete the task with minimal damage to the
-                                    surrounding area and our arborists are fully
-                                    trained and competent to carry out these
-                                    works. With all waste and logs removed from
-                                    site after these operations are carried out.
-                                </p>
-                            </div>
-
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <button
-                                    type="button"
-                                    class="btn btn-danger"
-                                    data-bs-dismiss="modal"
-                                >
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal" id="hedgeCuttingModal">
-                    <div class="modal-dialog modal-xl modal-dialog-centered">
-                        <div class="modal-content">
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title">Hedge cutting</h4>
-                                <button
-                                    type="button"
-                                    class="btn-close"
-                                    data-bs-dismiss="modal"
-                                ></button>
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <p>
-                                    Here at William Atherton Arboricultural
-                                    Services we are able to trim and maintain
-                                    any size or shape of hedge. We are also able
-                                    to reduce the height of hedges if required
-                                </p>
-                            </div>
-
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <button
-                                    type="button"
-                                    class="btn btn-danger"
-                                    data-bs-dismiss="modal"
-                                >
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal" id="treeReportModal">
-                    <div class="modal-dialog modal-xl modal-dialog-centered">
-                        <div class="modal-content">
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title">
-                                    Tree reports, TPO, planning applications &
-                                    tree planting
-                                </h4>
-                                <button
-                                    type="button"
-                                    class="btn-close"
-                                    data-bs-dismiss="modal"
-                                ></button>
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <p>
-                                    Here at William Atherton Arboricultural
-                                    Services, our trained professionals are able
-                                    to carry out a variety of tree reports, TPO
-                                    applications and planning applications to
-                                    suit your needs We are able to carry out
-                                    tree planting services depending on your
-                                    requirements, we can do both large scale
-                                    planting schemes as well as planting
-                                    singular specimens.
-                                </p>
-                            </div>
-
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <button
-                                    type="button"
-                                    class="btn btn-danger"
-                                    data-bs-dismiss="modal"
-                                >
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal" id="stumpGrindModal">
-                    <div class="modal-dialog modal-xl modal-dialog-centered">
-                        <div class="modal-content">
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title">Stump grinding</h4>
-                                <button
-                                    type="button"
-                                    class="btn-close"
-                                    data-bs-dismiss="modal"
-                                ></button>
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <p>
-                                    Here at William Atherton Arboricultural
-                                    Services we are able to use specialist stump
-                                    grinders to grind out stumps to below ground
-                                    level with all excess waste removed from
-                                    site.
-                                </p>
-                            </div>
-
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <button
-                                    type="button"
-                                    class="btn btn-danger"
-                                    data-bs-dismiss="modal"
-                                >
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal" id="treePruneModal">
-                    <div class="modal-dialog modal-xl modal-dialog-centered">
-                        <div class="modal-content">
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title">Tree pruning</h4>
-                                <button
-                                    type="button"
-                                    class="btn-close"
-                                    data-bs-dismiss="modal"
-                                ></button>
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <p>
-                                    There are various ways to prune your trees
-                                    to give them the best possible care
-                                    depending on there situation. At William
-                                    Atherton Arboricultural Services we can
-                                    carry out whole reductions, crown raises or
-                                    crown thins as well as removal of select
-                                    limbs and deadwooding. Whole tree reductions
-                                    are carried out to reduce the overall size
-                                    of the tree whilst still keeping the trees
-                                    natural form. This is done by removing a set
-                                    percentage or predetermined length off the
-                                    end each branch, such as 20% in a 20%
-                                    reduction or 1.5m in a 1.5m reduction,
-                                    bringing each branch to a select prune point
-                                    to allow for optimum growth of the tree in
-                                    the future. Crown raises are carried out via
-                                    the removal of the lowest branches to a
-                                    select height to allow space underneath the
-                                    canopy, with the correct cuts to Bs3998.
-                                    This method of pruning is effective in
-                                    allowing light transmission to areas within
-                                    close proximity to the tree. Crown thinning
-                                    is carried out to keep the size of the tree
-                                    the same but to remove select branches from
-                                    within the canopy to reduce the overall
-                                    volume of the tree and as such allows light
-                                    to pass through the canopy easier. Also,
-                                    William Atherton Arboricultural Services can
-                                    carry out the removal of select limbs which
-                                    could be causing a nuisance such as damaging
-                                    property or touching telephone wires. Also
-                                    we offer the removal of deadwood within a
-                                    canopy which could cause injury or damage if
-                                    it falls of its own accord.
-                                </p>
-                            </div>
-
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <button
-                                    type="button"
-                                    class="btn btn-danger"
-                                    data-bs-dismiss="modal"
-                                >
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal" id="siteClearModal">
-                    <div class="modal-dialog modal-xl modal-dialog-centered">
-                        <div class="modal-content">
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title">Site clearances</h4>
-                                <button
-                                    type="button"
-                                    class="btn-close"
-                                    data-bs-dismiss="modal"
-                                ></button>
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <p>
-                                    We are able to carry out full site
-                                    clearances with the removal off all
-                                    vegetation on site. We are available to
-                                    carry this work out for both commercial and
-                                    domestic clients.
-                                </p>
-                            </div>
-
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <button
-                                    type="button"
-                                    class="btn btn-danger"
-                                    data-bs-dismiss="modal"
-                                >
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <br />
-                <div class="row">
-                    <div class="col-lg-6 col-12">
-                        <h2>What We Do</h2>
-                        <h4>Dedicated to every aspect of tree maintenance</h4>
-                        <p>
-                            Once we have established your tree related problem,
-                            we strive to offer you the most suitable solution
-                            using a range of arboricultural practices. During
-                            any of our arboricultural operations we always look
-                            to minimise disruption and damage to your tree's
-                            surroundings using a variety of methods such as
-                            rigging and lowering of branches or placing
-                            protection in place where required.
-                        </p>
-                        <br />
-                        <h2>About the owner</h2>
-                        <p>
-                            Atherton Arboricultural Services is owned and
-                            operated by William Atherton who has over 5 years
-                            experience within the industry and also has a FdSc
-                            in Arboriculture and Urban Forestry through
-                            Myerscough and is in the process of completing his
-                            full Bsc in Arboriculture and Urban Forestry. He has
-                            worked all over the UK, but mostly operates in the
-                            North West of England and is based out of Preston.
-                            He also sub contracts out as a climber to multiple
-                            firms across the North West
-                        </p>
-                    </div>
-                    <div class="col-lg-6 col-12">
-                        <!-- Gallery -->
-                        <div class="row gy-4">
-                            <div class="col-lg-6 col-sm-6 col-12">
-                                <div
-                                    class="overlay img-container"
-                                    style="cursor: pointer"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#treeRemovalModal"
-                                >
-                                    <img
-                                        class="w-100 h-100 rounded"
-                                        src="images/cut_tree.webp"
-                                        alt="Nature"
-                                    />
-                                    <div class="topleft">Tree removal</div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-12">
-                                <div
-                                    class="overlay img-container"
-                                    style="cursor: pointer"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#hedgeCuttingModal"
-                                >
-                                    <img
-                                        class="w-100 h-100 rounded"
-                                        src="images/trim_hedge.webp"
-                                        alt="Nature"
-                                    />
-                                    <div class="topleft">Hedge cutting</div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-sm-6 col-12">
-                                <div
-                                    class="overlay img-container"
-                                    style="cursor: pointer"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#treeReportModal"
-                                >
-                                    <img
-                                        class="w-100 h-100 rounded"
-                                        src="images/plant_tree.webp"
-                                        alt="Nature"
-                                    />
-                                    <div class="topleft">
-                                        Tree reports, tree planting & more
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-12">
-                                <div
-                                    class="overlay img-container"
-                                    style="cursor: pointer"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#stumpGrindModal"
-                                >
-                                    <img
-                                        class="w-100 h-100 rounded"
-                                        src="images/tree_stump.webp"
-                                        alt="Nature"
-                                    />
-                                    <div class="topleft">Stump grinding</div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-sm-6 col-12">
-                                <div
-                                    class="overlay img-container"
-                                    style="cursor: pointer"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#treePruneModal"
-                                >
-                                    <img
-                                        class="w-100 h-100 rounded"
-                                        src="images/prune-tree.webp"
-                                        alt="Nature"
-                                    />
-                                    <div class="topleft">Tree pruning</div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-12">
-                                <div
-                                    class="overlay img-container"
-                                    style="cursor: pointer"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#siteClearModal"
-                                >
-                                    <img
-                                        class="w-100 h-100 rounded"
-                                        src="images/cut_tree_2.webp"
-                                        alt="Nature"
-                                    />
-                                    <div class="topleft">Site clearances</div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
-                        <center>Click images for more info</center>
-                    </div>
-                    <!-- Gallery -->
-                </div>
-
-                <br />
-                <hr class="dark" />
-                <br />
-
-                <div class="row">
-                    <div
-                        class="col col-lg-6 col-12 d-flex flex-column justify-content-center align-items-center"
-                    >
-                        <button
-                            type="button"
-                            class="btn btn-success btn-lg"
-                            data-bs-toggle="modal"
-                            data-bs-target="#bookingModal"
-                            href="#"
-                        >
-                            Book appointment
-                        </button>
-                    </div>
-
-                    <div class="col-lg-6 col-12">
-                        <center>
-                            <h2>Certified by</h2>
-                            <img
-                                src="images/nptc-logo.webp"
-                                alt="Logo"
-                                width="50"
-                                height="50"
-                            />
-                        </center>
-                    </div>
-                </div>
-                <br />
-                <div
-                    class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top"
-                    id="contact"
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
                 >
-                    <h3 class="w3-center">Contact</h3>
-                    <hr />
-                    <p>
-                        Use the below form and we will get back to you as soon
-                        as possible.
-                    </p>
-                    <p>
-                        Alternatively ring us on:
-                        <a href="tel:+44 7783 358117">+44-7783-358117</a>
-                    </p>
-
-                    <!-- TODO update email address -->
-                    <form
-                        action="mailto:WAArboriculturalServices@outlook.com"
-                        method="post"
-                        enctype="text/plain"
-                    >
-                        <div class="w3-section">
-                            <label>Name</label>
-                            <input
-                                class="w3-input w3-border"
-                                type="text"
-                                required
-                                id="name"
-                                name="name"
-                            />
-                        </div>
-                        <div class="w3-section">
-                            <label>Email</label>
-                            <input
-                                class="w3-input w3-border"
-                                type="email"
-                                id="email"
-                                name="email"
-                                required
-                            />
-                        </div>
-                        <div class="w3-section">
-                            <label>Message</label>
-                            <input
-                                class="w3-input w3-border"
-                                required
-                                id="message"
-                                name="message"
-                            />
-                        </div>
-                        <button
-                            type="submit"
-                            class="w3-button w3-block w3-dark-grey"
-                        >
-                            Send
-                        </button>
-                    </form>
-                    <br />
-                </div>
-
-                <!-- End page content -->
+                  Close
+                </button>
+              </div>
             </div>
+          </div>
         </div>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-            integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
-            crossorigin="anonymous"
-        ></script>
-        <script
-            type="text/javascript"
-            src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"
-        ></script>
-        <script>
-            $(document).ready(function () {
-                $(".carousel").slick({
-                    arrows: false,
-                    centerMode: true,
-                    slidesToShow: 9,
-                    slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 2000,
-                    responsive: [
-                        {
-                            breakpoint: 1500,
-                            settings: {
-                                centerPadding: "40px",
-                                slidesToShow: 5,
-                            },
-                        },
-                        {
-                            breakpoint: 800,
-                            settings: {
-                                centerPadding: "40px",
-                                slidesToShow: 3,
-                            },
-                        },
-                        {
-                            breakpoint: 600,
-                            settings: {
-                                centerPadding: "40px",
-                                slidesToShow: 2,
-                            },
-                        },
-                    ],
-                });
-            });
-        </script>
-    </body>
-    <footer class="bg-body-tertiary text-lg-start text-center">
-        <!-- Copyright -->
-        <div class="w3-light-grey p-3 text-center">
-            Site design:
-            <a class="text-body" href="https://christopher-aldred.github.io"
-                >Christopher Aldred</a
+
+        <div class="modal" id="treeRemovalModal">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Tree removal</h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <p>
+                  We are able to remove problematic trees using a variety of
+                  methods such as sectional dismantles, rigging and felling.
+                  With some cases, site and job specific, we will even employ
+                  the use of MEWPs (mobile, elevated work platforms) or cranes.
+                  We strive to complete the task with minimal damage to the
+                  surrounding area and our arborists are fully trained and
+                  competent to carry out these works. With all waste and logs
+                  removed from site after these operations are carried out.
+                </p>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="hedgeCuttingModal">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Hedge cutting</h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <p>
+                  Here at William Atherton Arboricultural Services we are able
+                  to trim and maintain any size or shape of hedge. We are also
+                  able to reduce the height of hedges if required
+                </p>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="treeReportModal">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">
+                  Tree reports, TPO, planning applications & tree planting
+                </h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <p>
+                  Here at William Atherton Arboricultural Services, our trained
+                  professionals are able to carry out a variety of tree reports,
+                  TPO applications and planning applications to suit your needs
+                  We are able to carry out tree planting services depending on
+                  your requirements, we can do both large scale planting schemes
+                  as well as planting singular specimens.
+                </p>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="stumpGrindModal">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Stump grinding</h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <p>
+                  Here at William Atherton Arboricultural Services we are able
+                  to use specialist stump grinders to grind out stumps to below
+                  ground level with all excess waste removed from site.
+                </p>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="treePruneModal">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Tree pruning</h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <p>
+                  There are various ways to prune your trees to give them the
+                  best possible care depending on there situation. At William
+                  Atherton Arboricultural Services we can carry out whole
+                  reductions, crown raises or crown thins as well as removal of
+                  select limbs and deadwooding. Whole tree reductions are
+                  carried out to reduce the overall size of the tree whilst
+                  still keeping the trees natural form. This is done by removing
+                  a set percentage or predetermined length off the end each
+                  branch, such as 20% in a 20% reduction or 1.5m in a 1.5m
+                  reduction, bringing each branch to a select prune point to
+                  allow for optimum growth of the tree in the future. Crown
+                  raises are carried out via the removal of the lowest branches
+                  to a select height to allow space underneath the canopy, with
+                  the correct cuts to Bs3998. This method of pruning is
+                  effective in allowing light transmission to areas within close
+                  proximity to the tree. Crown thinning is carried out to keep
+                  the size of the tree the same but to remove select branches
+                  from within the canopy to reduce the overall volume of the
+                  tree and as such allows light to pass through the canopy
+                  easier. Also, William Atherton Arboricultural Services can
+                  carry out the removal of select limbs which could be causing a
+                  nuisance such as damaging property or touching telephone
+                  wires. Also we offer the removal of deadwood within a canopy
+                  which could cause injury or damage if it falls of its own
+                  accord.
+                </p>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="siteClearModal">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Site clearances</h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <p>
+                  We are able to carry out full site clearances with the removal
+                  off all vegetation on site. We are available to carry this
+                  work out for both commercial and domestic clients.
+                </p>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <h2>What We Do</h2>
+            <h4>Dedicated to every aspect of tree maintenance</h4>
+            <p>
+              Once we have established your tree related problem, we strive to
+              offer you the most suitable solution using a range of
+              arboricultural practices. During any of our arboricultural
+              operations we always look to minimise disruption and damage to
+              your tree's surroundings using a variety of methods such as
+              rigging and lowering of branches or placing protection in place
+              where required.
+            </p>
+            <br />
+            <h2>About the owner</h2>
+            <p>
+              Atherton Arboricultural Services is owned and operated by William
+              Atherton who has over 5 years experience within the industry and
+              also has a FdSc in Arboriculture and Urban Forestry through
+              Myerscough and is in the process of completing his full Bsc in
+              Arboriculture and Urban Forestry. He has worked all over the UK,
+              but mostly operates in the North West of England and is based out
+              of Preston. He also sub contracts out as a climber to multiple
+              firms across the North West
+            </p>
+          </div>
+          <div class="col-lg-6 col-12">
+            <!-- Gallery -->
+            <div class="row gy-4">
+              <div class="col-lg-6 col-sm-6 col-12">
+                <div
+                  class="overlay img-container"
+                  style="cursor: pointer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#treeRemovalModal"
+                >
+                  <img
+                    class="w-100 h-100 rounded"
+                    src="images/cut_tree.webp"
+                    alt="Nature"
+                  />
+                  <div class="topleft">Tree removal</div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-6 col-12">
+                <div
+                  class="overlay img-container"
+                  style="cursor: pointer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#hedgeCuttingModal"
+                >
+                  <img
+                    class="w-100 h-100 rounded"
+                    src="images/trim_hedge.webp"
+                    alt="Nature"
+                  />
+                  <div class="topleft">Hedge cutting</div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-sm-6 col-12">
+                <div
+                  class="overlay img-container"
+                  style="cursor: pointer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#treeReportModal"
+                >
+                  <img
+                    class="w-100 h-100 rounded"
+                    src="images/plant_tree.webp"
+                    alt="Nature"
+                  />
+                  <div class="topleft">Tree reports, tree planting & more</div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-6 col-12">
+                <div
+                  class="overlay img-container"
+                  style="cursor: pointer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#stumpGrindModal"
+                >
+                  <img
+                    class="w-100 h-100 rounded"
+                    src="images/tree_stump.webp"
+                    alt="Nature"
+                  />
+                  <div class="topleft">Stump grinding</div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-sm-6 col-12">
+                <div
+                  class="overlay img-container"
+                  style="cursor: pointer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#treePruneModal"
+                >
+                  <img
+                    class="w-100 h-100 rounded"
+                    src="images/prune-tree.webp"
+                    alt="Nature"
+                  />
+                  <div class="topleft">Tree pruning</div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-6 col-12">
+                <div
+                  class="overlay img-container"
+                  style="cursor: pointer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#siteClearModal"
+                >
+                  <img
+                    class="w-100 h-100 rounded"
+                    src="images/cut_tree_2.webp"
+                    alt="Nature"
+                  />
+                  <div class="topleft">Site clearances</div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <center>Click images for more info</center>
+          </div>
+          <!-- Gallery -->
+        </div>
+
+        <br />
+        <hr class="dark" />
+        <br />
+
+        <div class="row">
+          <div
+            class="col col-lg-6 col-12 d-flex flex-column justify-content-center align-items-center"
+          >
+            <button
+              type="button"
+              class="btn btn-success btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#bookingModal"
+              href="#"
             >
+              Book appointment
+            </button>
+          </div>
+
+          <div class="col-lg-6 col-12">
+            <center>
+              <h2>Certified by</h2>
+              <img
+                src="images/nptc-logo.webp"
+                alt="Logo"
+                width="50"
+                height="50"
+              />
+            </center>
+          </div>
         </div>
-        <!-- Copyright -->
-    </footer>
+        <br />
+        <div
+          class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top"
+          id="contact"
+        >
+          <h3 class="w3-center">Contact</h3>
+          <hr />
+          <p>
+            Use the below form and we will get back to you as soon as possible.
+          </p>
+          <p>
+            Alternatively ring us on:
+            <a href="tel:+44 7783 358117">+44-7783-358117</a>
+          </p>
+
+          <!-- TODO update email address -->
+          <form
+            action="mailto:WAArboriculturalServices@outlook.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <div class="w3-section">
+              <label>Name</label>
+              <input
+                class="w3-input w3-border"
+                type="text"
+                required
+                id="name"
+                name="name"
+              />
+            </div>
+            <div class="w3-section">
+              <label>Email</label>
+              <input
+                class="w3-input w3-border"
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+            <div class="w3-section">
+              <label>Message</label>
+              <input
+                class="w3-input w3-border"
+                required
+                id="message"
+                name="message"
+              />
+            </div>
+            <button type="submit" class="w3-button w3-block w3-dark-grey">
+              Send
+            </button>
+          </form>
+          <br />
+        </div>
+
+        <!-- End page content -->
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".carousel").slick({
+          arrows: false,
+          centerMode: true,
+          slidesToShow: 9,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          responsive: [
+            {
+              breakpoint: 1500,
+              settings: {
+                centerPadding: "40px",
+                slidesToShow: 5,
+              },
+            },
+            {
+              breakpoint: 800,
+              settings: {
+                centerPadding: "40px",
+                slidesToShow: 3,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                centerPadding: "40px",
+                slidesToShow: 2,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+  </body>
+  <footer class="bg-body-tertiary text-lg-start text-center">
+    <!-- Copyright -->
+    <div class="w3-light-grey p-3 text-center">
+      Site design:
+      <a class="text-body" href="https://christopher-aldred.github.io"
+        >Christopher Aldred</a
+      >
+    </div>
+    <!-- Copyright -->
+  </footer>
 </html>
