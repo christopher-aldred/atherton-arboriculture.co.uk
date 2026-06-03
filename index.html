@@ -244,7 +244,7 @@
             href="tel:+447515797491"
             class="font-semibold text-lg hover:text-green-200 transition-colors"
           >
-            +44 7783 358117
+            +44 7515 797491
           </a>
         </p>
       </div>
@@ -500,20 +500,15 @@
               class="absolute inset-0 w-full h-full object-cover"
               draggable="false"
             />
-            <!-- Before image clipped from the right — image is full-container width, not clip width -->
-            <div
+            <!-- Before image clipped via clip-path so its size never depends on the clip wrapper -->
+            <img
               id="hedgeClip"
-              class="absolute inset-0 overflow-hidden"
-              style="width: 50%; z-index: 1"
-            >
-              <img
-                src="images/hedge_before.jpeg"
-                alt="Hedge before"
-                class="absolute top-0 left-0 h-full object-cover object-left"
-                style="width: 200%"
-                draggable="false"
-              />
-            </div>
+              src="images/hedge_before.jpeg"
+              alt="Hedge before"
+              class="absolute inset-0 w-full h-full object-cover"
+              style="clip-path: inset(0 50% 0 0); z-index: 1"
+              draggable="false"
+            />
             <!-- Slider handle -->
             <div
               id="hedgeHandle"
@@ -549,7 +544,7 @@
                   0,
                   Math.min(1, (x - rect.left) / rect.width),
                 );
-                clip.style.width = pct * 100 + "%";
+                clip.style.clipPath = `inset(0 ${(1 - pct) * 100}% 0 0)`;
                 handle.style.left = pct * 100 + "%";
               }
 
@@ -687,25 +682,104 @@
 
       <!-- Row 5: image left, text right -->
       <div
-        class="service-row flex flex-col md:flex-row overflow-hidden cursor-pointer border-t border-gray-100"
-        onclick="openModal('treePruneModal')"
-        role="button"
-        tabindex="0"
-        aria-label="Tree pruning – click for more info"
+        class="service-row flex flex-col md:flex-row overflow-hidden border-t border-gray-100"
       >
-        <div class="md:w-1/2 overflow-hidden h-80 md:h-[30rem]">
-          <img
-            src="images/prune-tree.webp"
-            alt="Tree pruning"
-            class="service-img w-full h-full object-cover transition-transform duration-700"
-          />
+        <div
+          class="md:w-1/2 overflow-hidden h-80 md:h-[30rem] relative select-none"
+        >
+          <!-- Before/after comparison -->
+          <div
+            id="pruneCompare"
+            class="absolute inset-0 w-full h-full"
+            style="touch-action: none"
+          >
+            <!-- After image (full container width) -->
+            <img
+              src="images/prune_after.jpeg"
+              alt="Prune after"
+              class="absolute inset-0 w-full h-full object-cover"
+              draggable="false"
+            />
+            <!-- Before image clipped via clip-path so its size never depends on the clip wrapper -->
+            <img
+              id="pruneClip"
+              src="images/prune_before.jpeg"
+              alt="Prune before"
+              class="absolute inset-0 w-full h-full object-cover"
+              style="clip-path: inset(0 50% 0 0); z-index: 1"
+              draggable="false"
+            />
+            <!-- Slider handle -->
+            <div
+              id="pruneHandle"
+              class="absolute top-0 bottom-0 w-1 bg-white shadow-md cursor-col-resize"
+              style="left: 50%"
+            >
+              <div
+                class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-700 z-999"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-label="Drag to compare"
+                >
+                  <title>Drag to compare</title>
+                  <path d="M8 5v14l-5-7 5-7zm8 0v14l5-7-5-7z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <script>
+            (function () {
+              var container = document.getElementById("pruneCompare");
+              if (!container) return;
+              var clip = document.getElementById("pruneClip");
+              var handle = document.getElementById("pruneHandle");
+              var isDragging = false;
+
+              function move(x) {
+                var rect = container.getBoundingClientRect();
+                var pct = Math.max(
+                  0,
+                  Math.min(1, (x - rect.left) / rect.width),
+                );
+                clip.style.clipPath = `inset(0 ${(1 - pct) * 100}% 0 0)`;
+                handle.style.left = pct * 100 + "%";
+              }
+
+              function onDown(e) {
+                isDragging = true;
+                e.preventDefault();
+              }
+
+              function onMove(e) {
+                if (!isDragging) return;
+                var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                move(clientX);
+              }
+
+              function onUp() {
+                isDragging = false;
+              }
+
+              handle.addEventListener("mousedown", onDown);
+              container.addEventListener("mousemove", onMove);
+              document.addEventListener("mouseup", onUp);
+              handle.addEventListener("touchstart", onDown, { passive: false });
+              container.addEventListener("touchmove", onMove, {
+                passive: false,
+              });
+              document.addEventListener("touchend", onUp);
+            })();
+          </script>
         </div>
         <div class="md:w-1/2 bg-white flex flex-col justify-center px-10 py-12">
           <h3 class="text-3xl font-bold text-forest-dark mb-1">Tree pruning</h3>
           <p
             class="text-xs font-bold uppercase tracking-widest text-forest-mid mb-4"
           >
-            Crown reductions, thinning &amp; deadwooding
+            Crown reductions, thinning & deadwooding
           </p>
           <p class="text-gray-600 leading-relaxed">
             Crown reductions, crown raising, crown thinning, selective limb
@@ -713,7 +787,16 @@
             give your trees the best possible care.
           </p>
           <span
-            class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest"
+            onclick="openModal('treePruneModal')"
+            role="button"
+            tabindex="0"
+            onkeydown="
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openModal('treePruneModal');
+              }
+            "
+            class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest cursor-pointer inline-block hover:text-forest-light transition-colors"
             >Learn more &rarr;</span
           >
         </div>
@@ -937,7 +1020,7 @@
               d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58z"
             />
           </svg>
-          +44 7783 358117
+          +44 7515 797491
         </a>
 
         <form
@@ -1065,7 +1148,7 @@
             <a
               href="tel:+447515797491"
               class="text-forest-dark font-semibold hover:underline"
-              >+44 7783 358117</a
+              >+44 7515 797491</a
             >
           </p>
         </div>
