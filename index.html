@@ -509,23 +509,31 @@
               style="clip-path: inset(0 50% 0 0); z-index: 1"
               draggable="false"
             />
+            <!-- Before / After labels -->
+            <span class="absolute bottom-3 left-3 z-10 bg-black/50 text-white text-xs font-bold uppercase tracking-widest px-2 py-1 pointer-events-none">Before</span>
+            <span class="absolute bottom-3 right-3 z-10 bg-black/50 text-white text-xs font-bold uppercase tracking-widest px-2 py-1 pointer-events-none">After</span>
             <!-- Slider handle -->
             <div
               id="hedgeHandle"
-              class="absolute top-0 bottom-0 w-1 bg-white shadow-md cursor-col-resize"
+              class="absolute top-0 bottom-0 w-1 bg-white shadow-md cursor-col-resize overflow-visible"
               style="left: 50%"
             >
               <div
-                class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center"
+                class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center z-10"
               >
                 <svg
-                  class="w-4 h-4 text-gray-700 z-999"
-                  fill="currentColor"
+                  class="w-5 h-5 text-gray-700"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                   viewBox="0 0 24 24"
                   aria-label="Drag to compare"
                 >
                   <title>Drag to compare</title>
-                  <path d="M8 5v14l-5-7 5-7zm8 0v14l5-7-5-7z" />
+                  <polyline points="9 18 3 12 9 6" />
+                  <polyline points="15 6 21 12 15 18" />
                 </svg>
               </div>
             </div>
@@ -709,6 +717,9 @@
               style="clip-path: inset(0 50% 0 0); z-index: 1"
               draggable="false"
             />
+            <!-- Before / After labels -->
+            <span class="absolute bottom-3 left-3 z-10 bg-black/50 text-white text-xs font-bold uppercase tracking-widest px-2 py-1 pointer-events-none">Before</span>
+            <span class="absolute bottom-3 right-3 z-10 bg-black/50 text-white text-xs font-bold uppercase tracking-widest px-2 py-1 pointer-events-none">After</span>
             <!-- Slider handle -->
             <div
               id="pruneHandle"
@@ -716,16 +727,21 @@
               style="left: 50%"
             >
               <div
-                class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center"
+                class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center z-10"
               >
                 <svg
-                  class="w-4 h-4 text-gray-700 z-999"
-                  fill="currentColor"
+                  class="w-5 h-5 text-gray-700"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                   viewBox="0 0 24 24"
                   aria-label="Drag to compare"
                 >
                   <title>Drag to compare</title>
-                  <path d="M8 5v14l-5-7 5-7zm8 0v14l5-7-5-7z" />
+                  <polyline points="9 18 3 12 9 6" />
+                  <polyline points="15 6 21 12 15 18" />
                 </svg>
               </div>
             </div>
