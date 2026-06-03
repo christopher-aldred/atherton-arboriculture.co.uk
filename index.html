@@ -74,24 +74,7 @@
     <meta name="geo.placename" content="Leyland" />
 
     <link rel="canonical" href="https://atherton-arboriculture.co.uk/" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link rel="icon" href="images/favicon/favicon.png" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -500,18 +483,97 @@
 
     <!-- Row 2: text left, image right -->
     <div
-      class="service-row flex flex-col md:flex-row-reverse overflow-hidden cursor-pointer border-t border-gray-100"
-      onclick="openModal('hedgeCuttingModal')"
-      role="button"
-      tabindex="0"
-      aria-label="Hedge cutting – click for more info"
+      class="service-row flex flex-col md:flex-row-reverse overflow-hidden border-t border-gray-100"
     >
-      <div class="md:w-1/2 overflow-hidden h-80 md:h-[30rem]">
-        <img
-          src="images/gallery/6.webp"
-          alt="Hedge cutting"
-          class="service-img w-full h-full object-cover transition-transform duration-700"
-        />
+      <div
+        class="md:w-1/2 overflow-hidden h-80 md:h-[30rem] relative select-none"
+      >
+        <!-- Before/after comparison -->
+        <div
+          id="hedgeCompare"
+          class="absolute inset-0 w-full h-full"
+          style="touch-action: none"
+        >
+          <!-- After image (full container width) -->
+          <img
+            src="images/hedge_after (1).jpeg"
+            alt="Hedge after"
+            class="absolute inset-0 w-full h-full object-cover"
+            draggable="false"
+          />
+          <!-- Before image clipped from the right — image is full-container width, not clip width -->
+          <div
+            id="hedgeClip"
+            class="absolute inset-0 overflow-hidden"
+            style="width: 50%; z-index: 1"
+          >
+            <img
+              src="images/hedge_before (1).jpeg"
+              alt="Hedge before"
+              class="absolute top-0 left-0 h-full object-cover object-left"
+              style="width: 200%"
+              draggable="false"
+            />
+          </div>
+          <!-- Slider handle -->
+          <div
+            id="hedgeHandle"
+            class="absolute top-0 bottom-0 w-1 bg-white shadow-md cursor-col-resize"
+            style="left: 50%"
+          >
+            <div
+              class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center"
+            >
+              <svg
+                class="w-4 h-4 text-gray-700"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-label="Drag to compare"
+              >
+                <title>Drag to compare</title>
+                <path d="M8 5v14l-5-7 5-7zm8 0v14l5-7-5-7z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <script>
+          (function () {
+            var container = document.getElementById("hedgeCompare");
+            if (!container) return;
+            var clip = document.getElementById("hedgeClip");
+            var handle = document.getElementById("hedgeHandle");
+            var isDragging = false;
+
+            function move(x) {
+              var rect = container.getBoundingClientRect();
+              var pct = Math.max(0, Math.min(1, (x - rect.left) / rect.width));
+              clip.style.width = pct * 100 + "%";
+              handle.style.left = pct * 100 + "%";
+            }
+
+            function onDown(e) {
+              isDragging = true;
+              e.preventDefault();
+            }
+
+            function onMove(e) {
+              if (!isDragging) return;
+              var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+              move(clientX);
+            }
+
+            function onUp() {
+              isDragging = false;
+            }
+
+            handle.addEventListener("mousedown", onDown);
+            container.addEventListener("mousemove", onMove);
+            document.addEventListener("mouseup", onUp);
+            handle.addEventListener("touchstart", onDown, { passive: false });
+            container.addEventListener("touchmove", onMove, { passive: false });
+            document.addEventListener("touchend", onUp);
+          })();
+        </script>
       </div>
       <div
         class="md:w-1/2 bg-stone-50 flex flex-col justify-center px-10 py-12"
@@ -520,7 +582,7 @@
         <p
           class="text-xs font-bold uppercase tracking-widest text-forest-mid mb-4"
         >
-          Trimming &amp; maintenance
+          Trimming & maintenance
         </p>
         <p class="text-gray-600 leading-relaxed">
           We trim and maintain any size or shape of hedge, and can reduce the
