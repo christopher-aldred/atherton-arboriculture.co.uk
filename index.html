@@ -989,19 +989,11 @@
             Send message
           </button>
 
-          <!-- Success / error feedback -->
-          <div
-            id="formSuccess"
-            class="hidden text-center py-3 bg-green-50 border-2 border-green-600 text-green-800 font-semibold text-sm"
-          >
-            Message sent — we'll be in touch shortly.
-          </div>
-          <div
-            id="formError"
-            class="hidden text-center py-3 bg-red-50 border-2 border-red-600 text-red-800 font-semibold text-sm"
-          >
-            Something went wrong. Please try calling us directly.
-          </div>
+          <input
+            type="hidden"
+            name="redirect"
+            value="https://atherton-arboriculture.co.uk/404.html"
+          />
         </form>
       </div>
     </section>
@@ -1312,41 +1304,6 @@
 
     <!-- ── Scripts ─────────────────────────────────────────────── -->
     <script>
-      // ── Contact form (Web3Forms) ──────────────────────────────
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", async (e) => {
-          e.preventDefault();
-          const btn = document.getElementById("submitBtn");
-          const success = document.getElementById("formSuccess");
-          const error = document.getElementById("formError");
-
-          btn.disabled = true;
-          btn.textContent = "Sending…";
-          success.classList.add("hidden");
-          error.classList.add("hidden");
-
-          try {
-            const res = await fetch("https://api.web3forms.com/submit", {
-              method: "POST",
-              body: new FormData(e.target),
-            });
-            const data = await res.json();
-
-            if (data.success) {
-              success.classList.remove("hidden");
-              e.target.reset();
-            } else {
-              error.classList.remove("hidden");
-            }
-          } catch {
-            error.classList.remove("hidden");
-          } finally {
-            btn.disabled = false;
-            btn.textContent = "Send message";
-          }
-        });
-
       // ── Vanilla modal ─────────────────────────────────────────
       const backdrop = document.getElementById("modalBackdrop");
 
