@@ -596,7 +596,11 @@
             well-managed.
           </p>
           <span
-            class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest"
+            onclick="openModal('hedgeCuttingModal')"
+            role="button"
+            tabindex="0"
+            onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openModal('hedgeCuttingModal'); }"
+            class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest cursor-pointer inline-block hover:text-forest-light transition-colors"
             >Learn more &rarr;</span
           >
         </div>
