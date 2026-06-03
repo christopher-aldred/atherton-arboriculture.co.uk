@@ -1170,13 +1170,13 @@
     <!-- ── Modals ──────────────────────────────────────────────── -->
     <div
       id="modalBackdrop"
-      class="fixed inset-0 z-50 hidden bg-black/50 flex items-center justify-center p-4"
+      class="fixed inset-0 z-50 hidden bg-black/50 flex items-start justify-center p-4 overflow-y-auto"
       onclick="closeModal()"
     ></div>
 
     <template id="tpl-bookingModal">
       <div
-        class="bg-white shadow-2xl w-full max-w-lg"
+        class="bg-white shadow-2xl w-full max-w-lg my-auto"
         onclick="event.stopPropagation()"
       >
         <div
@@ -1191,7 +1191,7 @@
             &times;
           </button>
         </div>
-        <div class="p-6">
+        <div class="p-6 overflow-y-auto max-h-[60vh]">
           <h3 class="text-xl font-bold mb-2">Coming soon&hellip;</h3>
           <p class="text-gray-600">
             Please call us on:
@@ -1216,7 +1216,7 @@
 
     <template id="tpl-treeRemovalModal">
       <div
-        class="bg-white shadow-2xl w-full max-w-2xl"
+        class="bg-white shadow-2xl w-full max-w-2xl my-auto"
         onclick="event.stopPropagation()"
       >
         <div
@@ -1231,7 +1231,7 @@
             &times;
           </button>
         </div>
-        <div class="p-6">
+        <div class="p-6 overflow-y-auto max-h-[60vh]">
           <p class="text-gray-700 leading-relaxed">
             We are able to remove problematic trees using a variety of methods
             such as sectional dismantles, rigging and felling. With some cases,
@@ -1256,7 +1256,7 @@
 
     <template id="tpl-hedgeCuttingModal">
       <div
-        class="bg-white shadow-2xl w-full max-w-2xl"
+        class="bg-white shadow-2xl w-full max-w-2xl my-auto"
         onclick="event.stopPropagation()"
       >
         <div
@@ -1271,7 +1271,7 @@
             &times;
           </button>
         </div>
-        <div class="p-6">
+        <div class="p-6 overflow-y-auto max-h-[60vh]">
           <p class="text-gray-700 leading-relaxed">
             Here at William Atherton Arboricultural Services we are able to trim
             and maintain any size or shape of hedge. We are also able to reduce
@@ -1292,7 +1292,7 @@
 
     <template id="tpl-treeReportModal">
       <div
-        class="bg-white shadow-2xl w-full max-w-2xl"
+        class="bg-white shadow-2xl w-full max-w-2xl my-auto"
         onclick="event.stopPropagation()"
       >
         <div
@@ -1309,7 +1309,7 @@
             &times;
           </button>
         </div>
-        <div class="p-6">
+        <div class="p-6 overflow-y-auto max-h-[60vh]">
           <p class="text-gray-700 leading-relaxed">
             Our trained professionals are able to carry out a variety of tree
             reports, TPO applications and planning applications to suit your
@@ -1331,7 +1331,7 @@
 
     <template id="tpl-stumpGrindModal">
       <div
-        class="bg-white shadow-2xl w-full max-w-2xl"
+        class="bg-white shadow-2xl w-full max-w-2xl my-auto"
         onclick="event.stopPropagation()"
       >
         <div
@@ -1346,7 +1346,7 @@
             &times;
           </button>
         </div>
-        <div class="p-6">
+        <div class="p-6 overflow-y-auto max-h-[60vh]">
           <p class="text-gray-700 leading-relaxed">
             We use specialist stump grinders to grind out stumps to below ground
             level, with all excess waste removed from site.
@@ -1366,7 +1366,7 @@
 
     <template id="tpl-treePruneModal">
       <div
-        class="bg-white shadow-2xl w-full max-w-2xl"
+        class="bg-white shadow-2xl w-full max-w-2xl my-auto"
         onclick="event.stopPropagation()"
       >
         <div
@@ -1381,7 +1381,7 @@
             &times;
           </button>
         </div>
-        <div class="p-6 space-y-3 text-gray-700 leading-relaxed">
+        <div class="p-6 space-y-3 text-gray-700 leading-relaxed overflow-y-auto max-h-[60vh]">
           <p>
             There are various ways to prune trees depending on their situation.
             We can carry out whole reductions, crown raises, or crown thinning,
@@ -1428,7 +1428,7 @@
 
     <template id="tpl-siteClearModal">
       <div
-        class="bg-white shadow-2xl w-full max-w-2xl"
+        class="bg-white shadow-2xl w-full max-w-2xl my-auto"
         onclick="event.stopPropagation()"
       >
         <div
@@ -1443,7 +1443,7 @@
             &times;
           </button>
         </div>
-        <div class="p-6">
+        <div class="p-6 overflow-y-auto max-h-[60vh]">
           <p class="text-gray-700 leading-relaxed">
             We are able to carry out full site clearances with the removal of
             all vegetation on site, for both commercial and domestic clients.
