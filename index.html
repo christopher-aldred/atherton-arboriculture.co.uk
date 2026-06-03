@@ -262,6 +262,11 @@
           >About</a
         >
         <a
+          href="#services"
+          class="px-8 py-3 text-green-100 font-semibold text-sm uppercase tracking-widest hover:bg-forest-mid hover:text-white transition-colors"
+          >Services</a
+        >
+        <a
           href="#instagram"
           class="px-8 py-3 text-green-100 font-semibold text-sm uppercase tracking-widest hover:bg-forest-mid hover:text-white transition-colors"
           >Socials</a
@@ -271,13 +276,6 @@
           class="px-8 py-3 text-green-100 font-semibold text-sm uppercase tracking-widest hover:bg-forest-mid hover:text-white transition-colors"
           >Contact</a
         >
-        <!-- <button
-          type="button"
-          onclick="openModal('bookingModal')"
-          class="px-8 py-3 text-green-100 font-semibold text-sm uppercase tracking-widest hover:bg-forest-mid hover:text-white transition-colors cursor-pointer"
-        >
-          Book
-        </button> -->
       </div>
     </nav>
 
@@ -448,297 +446,308 @@
     <!-- ── Checkerboard Services ──────────────────────────────── -->
 
     <!-- Row 1: image left, text right -->
-    <div
-      class="service-row flex flex-col md:flex-row overflow-hidden cursor-pointer border-t border-gray-100"
-      onclick="openModal('treeRemovalModal')"
-      role="button"
-      tabindex="0"
-      aria-label="Tree removal – click for more info"
-    >
-      <div class="md:w-1/2 overflow-hidden h-80 md:h-[30rem]">
-        <img
-          src="images/gallery/10.webp"
-          alt="Tree removal"
-          class="service-img w-full h-full object-cover transition-transform duration-700"
-        />
-      </div>
-      <div class="md:w-1/2 bg-white flex flex-col justify-center px-10 py-12">
-        <h3 class="text-3xl font-bold text-forest-dark mb-1">Tree removal</h3>
-        <p
-          class="text-xs font-bold uppercase tracking-widest text-forest-mid mb-4"
-        >
-          Sectional dismantles &amp; felling
-        </p>
-        <p class="text-gray-600 leading-relaxed">
-          We remove problematic trees using sectional dismantles, rigging and
-          felling — including MEWPs and cranes where required. All waste and
-          logs are removed from site on completion.
-        </p>
-        <span
-          class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest"
-          >Learn more &rarr;</span
-        >
-      </div>
-    </div>
-
-    <!-- Row 2: text left, image right -->
-    <div
-      class="service-row flex flex-col md:flex-row-reverse overflow-hidden border-t border-gray-100"
-    >
+    <section id="services">
       <div
-        class="md:w-1/2 overflow-hidden h-80 md:h-[30rem] relative select-none"
+        class="service-row flex flex-col md:flex-row overflow-hidden cursor-pointer border-t border-gray-100"
+        onclick="openModal('treeRemovalModal')"
+        role="button"
+        tabindex="0"
+        aria-label="Tree removal – click for more info"
       >
-        <!-- Before/after comparison -->
-        <div
-          id="hedgeCompare"
-          class="absolute inset-0 w-full h-full"
-          style="touch-action: none"
-        >
-          <!-- After image (full container width) -->
+        <div class="md:w-1/2 overflow-hidden h-80 md:h-[30rem]">
           <img
-            src="images/hedge_after (1).jpeg"
-            alt="Hedge after"
-            class="absolute inset-0 w-full h-full object-cover"
-            draggable="false"
+            src="images/gallery/10.webp"
+            alt="Tree removal"
+            class="service-img w-full h-full object-cover transition-transform duration-700"
           />
-          <!-- Before image clipped from the right — image is full-container width, not clip width -->
-          <div
-            id="hedgeClip"
-            class="absolute inset-0 overflow-hidden"
-            style="width: 50%; z-index: 1"
+        </div>
+        <div class="md:w-1/2 bg-white flex flex-col justify-center px-10 py-12">
+          <h3 class="text-3xl font-bold text-forest-dark mb-1">Tree removal</h3>
+          <p
+            class="text-xs font-bold uppercase tracking-widest text-forest-mid mb-4"
           >
+            Sectional dismantles &amp; felling
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            We remove problematic trees using sectional dismantles, rigging and
+            felling — including MEWPs and cranes where required. All waste and
+            logs are removed from site on completion.
+          </p>
+          <span
+            class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest"
+            >Learn more &rarr;</span
+          >
+        </div>
+      </div>
+
+      <!-- Row 2: text left, image right -->
+      <div
+        class="service-row flex flex-col md:flex-row-reverse overflow-hidden border-t border-gray-100"
+      >
+        <div
+          class="md:w-1/2 overflow-hidden h-80 md:h-[30rem] relative select-none"
+        >
+          <!-- Before/after comparison -->
+          <div
+            id="hedgeCompare"
+            class="absolute inset-0 w-full h-full"
+            style="touch-action: none"
+          >
+            <!-- After image (full container width) -->
             <img
-              src="images/hedge_before (1).jpeg"
-              alt="Hedge before"
-              class="absolute top-0 left-0 h-full object-cover object-left"
-              style="width: 200%"
+              src="images/hedge_after (1).jpeg"
+              alt="Hedge after"
+              class="absolute inset-0 w-full h-full object-cover"
               draggable="false"
             />
-          </div>
-          <!-- Slider handle -->
-          <div
-            id="hedgeHandle"
-            class="absolute top-0 bottom-0 w-1 bg-white shadow-md cursor-col-resize"
-            style="left: 50%"
-          >
+            <!-- Before image clipped from the right — image is full-container width, not clip width -->
             <div
-              class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center"
+              id="hedgeClip"
+              class="absolute inset-0 overflow-hidden"
+              style="width: 50%; z-index: 1"
             >
-              <svg
-                class="w-4 h-4 text-gray-700 z-999"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-label="Drag to compare"
+              <img
+                src="images/hedge_before (1).jpeg"
+                alt="Hedge before"
+                class="absolute top-0 left-0 h-full object-cover object-left"
+                style="width: 200%"
+                draggable="false"
+              />
+            </div>
+            <!-- Slider handle -->
+            <div
+              id="hedgeHandle"
+              class="absolute top-0 bottom-0 w-1 bg-white shadow-md cursor-col-resize"
+              style="left: 50%"
+            >
+              <div
+                class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center"
               >
-                <title>Drag to compare</title>
-                <path d="M8 5v14l-5-7 5-7zm8 0v14l5-7-5-7z" />
-              </svg>
+                <svg
+                  class="w-4 h-4 text-gray-700 z-999"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-label="Drag to compare"
+                >
+                  <title>Drag to compare</title>
+                  <path d="M8 5v14l-5-7 5-7zm8 0v14l5-7-5-7z" />
+                </svg>
+              </div>
             </div>
           </div>
+          <script>
+            (function () {
+              var container = document.getElementById("hedgeCompare");
+              if (!container) return;
+              var clip = document.getElementById("hedgeClip");
+              var handle = document.getElementById("hedgeHandle");
+              var isDragging = false;
+
+              function move(x) {
+                var rect = container.getBoundingClientRect();
+                var pct = Math.max(
+                  0,
+                  Math.min(1, (x - rect.left) / rect.width),
+                );
+                clip.style.width = pct * 100 + "%";
+                handle.style.left = pct * 100 + "%";
+              }
+
+              function onDown(e) {
+                isDragging = true;
+                e.preventDefault();
+              }
+
+              function onMove(e) {
+                if (!isDragging) return;
+                var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                move(clientX);
+              }
+
+              function onUp() {
+                isDragging = false;
+              }
+
+              handle.addEventListener("mousedown", onDown);
+              container.addEventListener("mousemove", onMove);
+              document.addEventListener("mouseup", onUp);
+              handle.addEventListener("touchstart", onDown, { passive: false });
+              container.addEventListener("touchmove", onMove, {
+                passive: false,
+              });
+              document.addEventListener("touchend", onUp);
+            })();
+          </script>
         </div>
-        <script>
-          (function () {
-            var container = document.getElementById("hedgeCompare");
-            if (!container) return;
-            var clip = document.getElementById("hedgeClip");
-            var handle = document.getElementById("hedgeHandle");
-            var isDragging = false;
-
-            function move(x) {
-              var rect = container.getBoundingClientRect();
-              var pct = Math.max(0, Math.min(1, (x - rect.left) / rect.width));
-              clip.style.width = pct * 100 + "%";
-              handle.style.left = pct * 100 + "%";
-            }
-
-            function onDown(e) {
-              isDragging = true;
-              e.preventDefault();
-            }
-
-            function onMove(e) {
-              if (!isDragging) return;
-              var clientX = e.touches ? e.touches[0].clientX : e.clientX;
-              move(clientX);
-            }
-
-            function onUp() {
-              isDragging = false;
-            }
-
-            handle.addEventListener("mousedown", onDown);
-            container.addEventListener("mousemove", onMove);
-            document.addEventListener("mouseup", onUp);
-            handle.addEventListener("touchstart", onDown, { passive: false });
-            container.addEventListener("touchmove", onMove, { passive: false });
-            document.addEventListener("touchend", onUp);
-          })();
-        </script>
+        <div
+          class="md:w-1/2 bg-stone-50 flex flex-col justify-center px-10 py-12"
+        >
+          <h3 class="text-3xl font-bold text-forest-dark mb-1">
+            Hedge cutting
+          </h3>
+          <p
+            class="text-xs font-bold uppercase tracking-widest text-forest-mid mb-4"
+          >
+            Trimming & maintenance
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            We trim and maintain any size or shape of hedge, and can reduce the
+            height of hedges where required to keep your property neat and
+            well-managed.
+          </p>
+          <span
+            class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest"
+            >Learn more &rarr;</span
+          >
+        </div>
       </div>
+
+      <!-- Row 3: image left, text right -->
       <div
-        class="md:w-1/2 bg-stone-50 flex flex-col justify-center px-10 py-12"
+        class="service-row flex flex-col md:flex-row overflow-hidden cursor-pointer border-t border-gray-100"
+        onclick="openModal('treeReportModal')"
+        role="button"
+        tabindex="0"
+        aria-label="Tree reports and planting – click for more info"
       >
-        <h3 class="text-3xl font-bold text-forest-dark mb-1">Hedge cutting</h3>
-        <p
-          class="text-xs font-bold uppercase tracking-widest text-forest-mid mb-4"
-        >
-          Trimming & maintenance
-        </p>
-        <p class="text-gray-600 leading-relaxed">
-          We trim and maintain any size or shape of hedge, and can reduce the
-          height of hedges where required to keep your property neat and
-          well-managed.
-        </p>
-        <span
-          class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest"
-          >Learn more &rarr;</span
-        >
+        <div class="md:w-1/2 overflow-hidden h-80 md:h-[30rem]">
+          <img
+            src="images/plant_tree.webp"
+            alt="Tree reports and planting"
+            class="service-img w-full h-full object-cover transition-transform duration-700"
+          />
+        </div>
+        <div class="md:w-1/2 bg-white flex flex-col justify-center px-10 py-12">
+          <h3 class="text-3xl font-bold text-forest-dark mb-1">
+            Tree reports &amp; planting
+          </h3>
+          <p
+            class="text-xs font-bold uppercase tracking-widest text-forest-mid mb-4"
+          >
+            TPO, planning applications &amp; schemes
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            We produce tree reports, TPO applications and planning applications
+            to suit your needs. We also carry out planting schemes — from large
+            scale projects to individual specimens.
+          </p>
+          <span
+            class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest"
+            >Learn more &rarr;</span
+          >
+        </div>
       </div>
-    </div>
 
-    <!-- Row 3: image left, text right -->
-    <div
-      class="service-row flex flex-col md:flex-row overflow-hidden cursor-pointer border-t border-gray-100"
-      onclick="openModal('treeReportModal')"
-      role="button"
-      tabindex="0"
-      aria-label="Tree reports and planting – click for more info"
-    >
-      <div class="md:w-1/2 overflow-hidden h-80 md:h-[30rem]">
-        <img
-          src="images/plant_tree.webp"
-          alt="Tree reports and planting"
-          class="service-img w-full h-full object-cover transition-transform duration-700"
-        />
-      </div>
-      <div class="md:w-1/2 bg-white flex flex-col justify-center px-10 py-12">
-        <h3 class="text-3xl font-bold text-forest-dark mb-1">
-          Tree reports &amp; planting
-        </h3>
-        <p
-          class="text-xs font-bold uppercase tracking-widest text-forest-mid mb-4"
-        >
-          TPO, planning applications &amp; schemes
-        </p>
-        <p class="text-gray-600 leading-relaxed">
-          We produce tree reports, TPO applications and planning applications to
-          suit your needs. We also carry out planting schemes — from large scale
-          projects to individual specimens.
-        </p>
-        <span
-          class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest"
-          >Learn more &rarr;</span
-        >
-      </div>
-    </div>
-
-    <!-- Row 4: text left, image right -->
-    <div
-      class="service-row flex flex-col md:flex-row-reverse overflow-hidden cursor-pointer border-t border-gray-100"
-      onclick="openModal('stumpGrindModal')"
-      role="button"
-      tabindex="0"
-      aria-label="Stump grinding – click for more info"
-    >
-      <div class="md:w-1/2 overflow-hidden h-80 md:h-[30rem]">
-        <img
-          src="images/stump.png"
-          alt="Stump grinding"
-          class="service-img w-full h-full object-cover transition-transform duration-700"
-        />
-      </div>
+      <!-- Row 4: text left, image right -->
       <div
-        class="md:w-1/2 bg-stone-50 flex flex-col justify-center px-10 py-12"
+        class="service-row flex flex-col md:flex-row-reverse overflow-hidden cursor-pointer border-t border-gray-100"
+        onclick="openModal('stumpGrindModal')"
+        role="button"
+        tabindex="0"
+        aria-label="Stump grinding – click for more info"
       >
-        <h3 class="text-3xl font-bold text-forest-dark mb-1">Stump grinding</h3>
-        <p
-          class="text-xs font-bold uppercase tracking-widest text-forest-mid mb-4"
+        <div class="md:w-1/2 overflow-hidden h-80 md:h-[30rem]">
+          <img
+            src="images/stump.png"
+            alt="Stump grinding"
+            class="service-img w-full h-full object-cover transition-transform duration-700"
+          />
+        </div>
+        <div
+          class="md:w-1/2 bg-stone-50 flex flex-col justify-center px-10 py-12"
         >
-          Below ground removal
-        </p>
-        <p class="text-gray-600 leading-relaxed">
-          Using specialist stump grinders we remove stumps to below ground
-          level, with all excess waste cleared from site — leaving a clean
-          finish ready for replanting or landscaping.
-        </p>
-        <span
-          class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest"
-          >Learn more &rarr;</span
-        >
+          <h3 class="text-3xl font-bold text-forest-dark mb-1">
+            Stump grinding
+          </h3>
+          <p
+            class="text-xs font-bold uppercase tracking-widest text-forest-mid mb-4"
+          >
+            Below ground removal
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Using specialist stump grinders we remove stumps to below ground
+            level, with all excess waste cleared from site — leaving a clean
+            finish ready for replanting or landscaping.
+          </p>
+          <span
+            class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest"
+            >Learn more &rarr;</span
+          >
+        </div>
       </div>
-    </div>
 
-    <!-- Row 5: image left, text right -->
-    <div
-      class="service-row flex flex-col md:flex-row overflow-hidden cursor-pointer border-t border-gray-100"
-      onclick="openModal('treePruneModal')"
-      role="button"
-      tabindex="0"
-      aria-label="Tree pruning – click for more info"
-    >
-      <div class="md:w-1/2 overflow-hidden h-80 md:h-[30rem]">
-        <img
-          src="images/prune-tree.webp"
-          alt="Tree pruning"
-          class="service-img w-full h-full object-cover transition-transform duration-700"
-        />
-      </div>
-      <div class="md:w-1/2 bg-white flex flex-col justify-center px-10 py-12">
-        <h3 class="text-3xl font-bold text-forest-dark mb-1">Tree pruning</h3>
-        <p
-          class="text-xs font-bold uppercase tracking-widest text-forest-mid mb-4"
-        >
-          Crown reductions, thinning &amp; deadwooding
-        </p>
-        <p class="text-gray-600 leading-relaxed">
-          Crown reductions, crown raising, crown thinning, selective limb
-          removal and deadwooding — all carried out to BS3998 standards to give
-          your trees the best possible care.
-        </p>
-        <span
-          class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest"
-          >Learn more &rarr;</span
-        >
-      </div>
-    </div>
-
-    <!-- Row 6: text left, image right -->
-    <div
-      class="service-row flex flex-col md:flex-row-reverse overflow-hidden cursor-pointer border-t border-b border-gray-100"
-      onclick="openModal('siteClearModal')"
-      role="button"
-      tabindex="0"
-      aria-label="Site clearances – click for more info"
-    >
-      <div class="md:w-1/2 overflow-hidden h-80 md:h-[30rem]">
-        <img
-          src="images/clearance.png"
-          alt="Site clearances"
-          class="service-img w-full h-full object-cover transition-transform duration-700"
-        />
-      </div>
+      <!-- Row 5: image left, text right -->
       <div
-        class="md:w-1/2 bg-stone-50 flex flex-col justify-center px-10 py-12"
+        class="service-row flex flex-col md:flex-row overflow-hidden cursor-pointer border-t border-gray-100"
+        onclick="openModal('treePruneModal')"
+        role="button"
+        tabindex="0"
+        aria-label="Tree pruning – click for more info"
       >
-        <h3 class="text-3xl font-bold text-forest-dark mb-1">
-          Site clearances
-        </h3>
-        <p
-          class="text-xs font-bold uppercase tracking-widest text-forest-mid mb-4"
-        >
-          Commercial &amp; domestic
-        </p>
-        <p class="text-gray-600 leading-relaxed">
-          Full site clearances with removal of all vegetation on site for both
-          commercial and domestic clients — leaving the ground prepared and
-          ready for the next phase of your project.
-        </p>
-        <span
-          class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest"
-          >Learn more &rarr;</span
-        >
+        <div class="md:w-1/2 overflow-hidden h-80 md:h-[30rem]">
+          <img
+            src="images/prune-tree.webp"
+            alt="Tree pruning"
+            class="service-img w-full h-full object-cover transition-transform duration-700"
+          />
+        </div>
+        <div class="md:w-1/2 bg-white flex flex-col justify-center px-10 py-12">
+          <h3 class="text-3xl font-bold text-forest-dark mb-1">Tree pruning</h3>
+          <p
+            class="text-xs font-bold uppercase tracking-widest text-forest-mid mb-4"
+          >
+            Crown reductions, thinning &amp; deadwooding
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Crown reductions, crown raising, crown thinning, selective limb
+            removal and deadwooding — all carried out to BS3998 standards to
+            give your trees the best possible care.
+          </p>
+          <span
+            class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest"
+            >Learn more &rarr;</span
+          >
+        </div>
       </div>
-    </div>
+
+      <!-- Row 6: text left, image right -->
+      <div
+        class="service-row flex flex-col md:flex-row-reverse overflow-hidden cursor-pointer border-t border-b border-gray-100"
+        onclick="openModal('siteClearModal')"
+        role="button"
+        tabindex="0"
+        aria-label="Site clearances – click for more info"
+      >
+        <div class="md:w-1/2 overflow-hidden h-80 md:h-[30rem]">
+          <img
+            src="images/clearance.png"
+            alt="Site clearances"
+            class="service-img w-full h-full object-cover transition-transform duration-700"
+          />
+        </div>
+        <div
+          class="md:w-1/2 bg-stone-50 flex flex-col justify-center px-10 py-12"
+        >
+          <h3 class="text-3xl font-bold text-forest-dark mb-1">
+            Site clearances
+          </h3>
+          <p
+            class="text-xs font-bold uppercase tracking-widest text-forest-mid mb-4"
+          >
+            Commercial &amp; domestic
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Full site clearances with removal of all vegetation on site for both
+            commercial and domestic clients — leaving the ground prepared and
+            ready for the next phase of your project.
+          </p>
+          <span
+            class="mt-6 text-forest-dark font-semibold text-sm uppercase tracking-widest"
+            >Learn more &rarr;</span
+          >
+        </div>
+      </div>
+    </section>
 
     <!-- ── About the owner + CTA + Cert ─────────────────────────── -->
     <div class="bg-forest-dark">
