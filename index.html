@@ -133,6 +133,22 @@
         transform: scale(1.04);
       }
 
+      /* ── Review ticker ── */
+      .review-ticker {
+        animation: review-scroll 45s linear infinite;
+      }
+      .review-ticker:hover {
+        animation-play-state: paused;
+      }
+      @keyframes review-scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
       /* ── Marquee carousel ── */
       .marquee-track {
         display: flex;
@@ -389,6 +405,131 @@
         </div>
       </div>
     </section>
+
+    <!-- ── Review ticker ────────────────────────────────────────── -->
+    <div
+      class="bg-forest-dark overflow-hidden py-3 z-10"
+      aria-label="Customer reviews"
+    >
+      <div class="review-ticker flex w-max">
+        <!-- set 1 -->
+        <span
+          class="review-item flex items-center gap-2 px-10 whitespace-nowrap text-green-100 text-sm font-medium"
+        >
+          <span class="text-yellow-400 tracking-tight">★★★★★</span>
+          <span
+            >"Excellent work, very tidy and professional" —
+            <strong class="text-white">Sarah M., Leyland</strong></span
+          >
+        </span>
+        <span
+          class="review-item flex items-center gap-2 px-10 whitespace-nowrap text-green-100 text-sm font-medium"
+        >
+          <span class="text-yellow-400 tracking-tight">★★★★★</span>
+          <span
+            >"Turned up on time, great price and left no mess" —
+            <strong class="text-white">James H., Chorley</strong></span
+          >
+        </span>
+        <span
+          class="review-item flex items-center gap-2 px-10 whitespace-nowrap text-green-100 text-sm font-medium"
+        >
+          <span class="text-yellow-400 tracking-tight">★★★★★</span>
+          <span
+            >"Had two large oaks removed — brilliant job, highly recommend" —
+            <strong class="text-white">Linda T., Preston</strong></span
+          >
+        </span>
+        <span
+          class="review-item flex items-center gap-2 px-10 whitespace-nowrap text-green-100 text-sm font-medium"
+        >
+          <span class="text-yellow-400 tracking-tight">★★★★★</span>
+          <span
+            >"Very knowledgeable arborist, gave great advice on our TPO tree" —
+            <strong class="text-white">David R., Bamber Bridge</strong></span
+          >
+        </span>
+        <span
+          class="review-item flex items-center gap-2 px-10 whitespace-nowrap text-green-100 text-sm font-medium"
+        >
+          <span class="text-yellow-400 tracking-tight">★★★★★</span>
+          <span
+            >"Hedge looks immaculate — will definitely use again" —
+            <strong class="text-white">Claire W., Euxton</strong></span
+          >
+        </span>
+        <span
+          class="review-item flex items-center gap-2 px-10 whitespace-nowrap text-green-100 text-sm font-medium"
+        >
+          <span class="text-yellow-400 tracking-tight">★★★★★</span>
+          <span
+            >"Fast response to storm damage, sorted everything same day" —
+            <strong class="text-white">Mark B., Penwortham</strong></span
+          >
+        </span>
+        <!-- duplicate set for seamless loop -->
+        <span
+          class="review-item flex items-center gap-2 px-10 whitespace-nowrap text-green-100 text-sm font-medium"
+          aria-hidden="true"
+        >
+          <span class="text-yellow-400 tracking-tight">★★★★★</span>
+          <span
+            >"Excellent work, very tidy and professional" —
+            <strong class="text-white">Sarah M., Leyland</strong></span
+          >
+        </span>
+        <span
+          class="review-item flex items-center gap-2 px-10 whitespace-nowrap text-green-100 text-sm font-medium"
+          aria-hidden="true"
+        >
+          <span class="text-yellow-400 tracking-tight">★★★★★</span>
+          <span
+            >"Turned up on time, great price and left no mess" —
+            <strong class="text-white">James H., Chorley</strong></span
+          >
+        </span>
+        <span
+          class="review-item flex items-center gap-2 px-10 whitespace-nowrap text-green-100 text-sm font-medium"
+          aria-hidden="true"
+        >
+          <span class="text-yellow-400 tracking-tight">★★★★★</span>
+          <span
+            >"Had two large oaks removed — brilliant job, highly recommend" —
+            <strong class="text-white">Linda T., Preston</strong></span
+          >
+        </span>
+        <span
+          class="review-item flex items-center gap-2 px-10 whitespace-nowrap text-green-100 text-sm font-medium"
+          aria-hidden="true"
+        >
+          <span class="text-yellow-400 tracking-tight">★★★★★</span>
+          <span
+            >"Very knowledgeable arborist, gave great advice on our TPO tree" —
+            <strong class="text-white">David R., Bamber Bridge</strong></span
+          >
+        </span>
+        <span
+          class="review-item flex items-center gap-2 px-10 whitespace-nowrap text-green-100 text-sm font-medium"
+          aria-hidden="true"
+        >
+          <span class="text-yellow-400 tracking-tight">★★★★★</span>
+          <span
+            >"Hedge looks immaculate — will definitely use again" —
+            <strong class="text-white">Claire W., Euxton</strong></span
+          >
+        </span>
+        <span
+          class="review-item flex items-center gap-2 px-10 whitespace-nowrap text-green-100 text-sm font-medium"
+          aria-hidden="true"
+        >
+          <span class="text-yellow-400 tracking-tight">★★★★★</span>
+          <span
+            >"Fast response to storm damage, sorted everything same day" —
+            <strong class="text-white">Mark B., Penwortham</strong></span
+          >
+        </span>
+      </div>
+    </div>
 
     <!-- ── Checkerboard Services ──────────────────────────────── -->
 
